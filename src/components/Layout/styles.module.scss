@@ -1,0 +1,14 @@
+.layout__general {
+    background-color: #181818;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;    
+}
+
+.layout__container {
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
