@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.scss';
 import Title from './components/Title';
 import Filters from './components/Filters';
@@ -6,42 +7,56 @@ import Catalog from './components/Catalog';
 import useAxios from './hooks/useAxios';
 
 function App() {
-    const { data, fetchError, isLoading } = useAxios(
+    const [filtered, setFiltered] = useState([]);
+    const [selectedFilter, setSelectedFilter] = useState('all');
+
+    const {
+        data: filtersData,
+        fetchError: filtersFetchError,
+        isLoading: filtersIsLoading,
+    } = useAxios(
         'https://plankdesign.com/wp-json/plank/v1/fed-test/categories'
-    );
-    console.log(
-        '🚀 App ~ data, fetchError, isLoading',
-        data,
-        fetchError,
-        isLoading
     );
 
     const {
-        data: categoriesDta,
-        fetchError: categoriesFetchError,
-        isLoading: categoriesIsLoading,
+        data: catalogData,
+        fetchError: catalogFetchError,
+        isLoading: catalogIsLoading,
     } = useAxios(
         'https://plankdesign.com/wp-json/plank/v1/fed-test/case-studies'
     );
-    console.log(
-        '🚀 App ~ data, fetchError, isLoading',
-        data,
-        fetchError,
-        isLoading
-    );
+
+    useEffect(() => {
+        setFiltered(catalogData?.['case-studies'] || []);
+    }, [catalogData]);
+
+    const filterHandler = selectedSlug => {
+        if (selectedSlug === 'all') {
+            setFiltered(catalogData['case-studies']);
+           setSelectedFilter('all');
+        } else {
+            const filteredCatalog = catalogData['case-studies'].filter(item =>
+                item.categories.find(category => category.slug === selectedSlug)
+                );
+                setFiltered(filteredCatalog);
+                setSelectedFilter(selectedSlug);
+        }
+    };
 
     return (
         <Layout>
             <Title />
             <Filters
-                data={data}
-                fetchError={fetchError}
-                isLoading={isLoading}
+                filterHandler={filterHandler}
+                selectedFilter={selectedFilter}
+                data={filtersData}
+                fetchError={filtersFetchError}
+                isLoading={filtersIsLoading}
             />
             <Catalog
-                data={categoriesDta}
-                fetchError={categoriesFetchError}
-                isLoading={categoriesIsLoading}
+                data={filtered}
+                fetchError={catalogFetchError}
+                isLoading={catalogIsLoading}
             />
         </Layout>
     );

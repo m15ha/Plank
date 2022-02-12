@@ -1,31 +1,42 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-const Filters = ({ filterHandler, data, fetchError, isLoading }) => {
+const Filters = ({
+    filterHandler,
+    data,
+    fetchError,
+    isLoading,
+    selectedFilter,
+}) => {
+    const { categories } = data;
 
-    const {
-       categories,
-    } = data;
-       console.log("🚀 ~ file: index.js ~ line 9 ~ Filters ~ categories", categories)
     return (
         <ul className={styles.filter__container}>
             <li key='all'>
                 <button
-                    className={true ? styles.active : ''}
-                    onClick={filterHandler}
+                    className={selectedFilter === 'all' ? styles.active : ''}
+                    onClick={() => filterHandler('all')}
                 >
                     All
                 </button>
             </li>
-            {categories && categories.map(category => {
-                return (
-                    <li key={category.slug}>
-                        <button onClick={filterHandler}>
-                            {category.title}
-                        </button>
-                    </li>
-                );
-            })}
+            {categories &&
+                categories.map(category => {
+                    return (
+                        <li key={category.slug}>
+                            <button
+                                className={
+                                    selectedFilter === category.slug
+                                        ? styles.active
+                                        : ''
+                                }
+                                onClick={() => filterHandler(category.slug)}
+                            >
+                                {category.title}
+                            </button>
+                        </li>
+                    );
+                })}
         </ul>
     );
 };
