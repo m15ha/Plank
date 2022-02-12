@@ -19,7 +19,12 @@ const CatalogItem = ({ caseStudy }) => {
                 </div>
                 <h2 className={styles.content__title}>{title}</h2>
                 <p className={styles.content__text}>{excerpt}</p>
-                <a href='/' className={styles.content__button}>
+                <a
+                    href={link}
+                    target='_blank'
+                    className={styles.content__button}
+                    rel='noopener noreferrer'
+                >
                     View Case Study
                     <img
                         className={styles.content__svg}

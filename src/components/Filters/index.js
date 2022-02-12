@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.scss';
 
 const Filters = ({
@@ -8,7 +8,7 @@ const Filters = ({
     isLoading,
     selectedFilter,
 }) => {
-    const { categories } = data;
+    const { categories } = data; 
 
     return (
         <ul className={styles.filter__container}>

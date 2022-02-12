@@ -3,6 +3,9 @@
         display: flex;
         width: 601px;
         height: 292px;
+       @media (max-width: 1435px) { 
+            width: 501px;
+        }
     }
 
     &__ibg {
@@ -49,7 +52,6 @@
         line-height: 22px;
         color: #eeecec;
         flex: 1, 1, auto;
-        // width: 80%;
     }
     &__button {
         z-index: 1;
@@ -58,8 +60,6 @@
         width: 153px;
         min-height: 30px;
         align-items: center;
-        // padding: 8px, 0;
-        // padding-left: 12px;
         letter-spacing: 0.2px;
         text-align: center;
         margin: 10px 0;

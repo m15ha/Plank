@@ -1,14 +1,37 @@
-.layout__general {
-    background-color: #181818;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding: 80px;
+.layout {
+    &__general {
+        background-color: #181818;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 80px;
+        position: relative;
+    }
+    &__decoration1 {
+        z-index: 1;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    &__decoration2 {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__decoration3 {
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
 }
 
 .layout__container {
+    position: relative;
+    z-index: 22;
     max-width: 1280px;
-    width: 100%
+    width: 100%;
 }

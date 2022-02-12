@@ -3,5 +3,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 74px;
-    column-gap: 73px;
+    column-gap: 73px;    
+    // column-gap: min(73px, 25px);    
 }
