@@ -1,41 +1,23 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-const categories = [
-    {
-        title: 'Arts & Culture',
-        slug: 'arts-culture',
-    },
-    {
-        title: 'Non-Profits',
-        slug: 'non-profits',
-    },
-    {
-        title: 'Publishing & Education',
-        slug: 'publishing-higher-education',
-    },
-    {
-        title: 'Sports',
-        slug: 'sports',
-    },
-    {
-        title: 'Wellness',
-        slug: 'wellness',
-    },
-];
+const Filters = ({ filterHandler, data, fetchError, isLoading }) => {
 
-const Filters = ({ filterHandler }) => {
+    const {
+       categories,
+    } = data;
+       console.log("🚀 ~ file: index.js ~ line 9 ~ Filters ~ categories", categories)
     return (
         <ul className={styles.filter__container}>
             <li key='all'>
                 <button
-                    className={true ? styles.active : ""}
+                    className={true ? styles.active : ''}
                     onClick={filterHandler}
                 >
                     All
                 </button>
             </li>
-            {categories.map(category => {
+            {categories && categories.map(category => {
                 return (
                     <li key={category.slug}>
                         <button onClick={filterHandler}>
