@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-const Layout = () => {
+const Title = ({ children }) => {
     return (
         <>
-            <div className={styles.layout__general}>test</div>
+            <div className={styles.layout__general}>
+                <div className={styles.layout__container}>{children}</div>
+            </div>
         </>
     );
 };
 
-export default Layout;
+export default Title;
