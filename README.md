@@ -18,7 +18,7 @@ Then, run the development server:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result 🎉. 
 
-# A mini, responsive React app that matches the design specs with API endpoints to retrieve the data to be used, as well as some additions. Which will include:
+A mini, responsive React app that matches the design specs with API endpoints to retrieve the data to be used, as well as some additions. Which will include:
 
 Axios, Framer-motion.
     
