@@ -81,7 +81,7 @@
             padding: 80px;
             top: 0;
             transition: all 0.3s ease-in-out;
-            background-color: #161616;
+            background-color: #181818;
             overflow: hidden;
             svg {
                 display: flex;
@@ -90,11 +90,24 @@
                 top: 50px;
                 right: 50px;
             }
+            @media (max-width: 440px) {
+                padding: 20px;
+                svg {
+                    top: 20px;
+                    right: 20px;
+                }
+            }
         }
     }
 
     .filter__burger_container {
         display: flex;
+        margin-bottom: 81px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .filter__burger_container {
         margin-bottom: 40px;
     }
 }
