@@ -51,4 +51,50 @@
             transform: translate3d(-50%, -50%, 0) scale3d(16, 16, 16);
         }
     }
+    svg {
+        display: none;
+    }
+}
+
+.filter__burger_container {
+    display: none;
+}
+
+@media (max-width: 1225px) {
+    .filter__container {
+        display: none;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        li {
+            margin: 15px;
+            font-size: 38px;
+        }
+
+        &.filter__container_open {
+            display: block;
+            z-index: 33;
+            border-bottom: none;
+            padding: 80px;
+            top: 0;
+            transition: all 0.3s ease-in-out;
+            background-color: #161616;
+            overflow: hidden;
+            svg {
+                display: flex;
+                fill: #eeecec;
+                position: absolute;
+                top: 50px;
+                right: 50px;
+            }
+        }
+    }
+
+    .filter__burger_container {
+        display: flex;
+        margin-bottom: 40px;
+    }
 }
