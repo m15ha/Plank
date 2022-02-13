@@ -1,6 +1,6 @@
 {
-    "name": "plank",
     "homepage": "https://m15ha.github.io/plank/",
+    "name": "plank",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
