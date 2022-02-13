@@ -1,8 +1,23 @@
-.catalog__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 74px;
-    column-gap: 73px;    
-    // column-gap: min(73px, 25px);    
+.catalog {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 74px;
+        column-gap: 73px;
+    }
+    &__empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: #eeecec;
+    }
 }

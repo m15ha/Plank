@@ -1,10 +1,11 @@
 .item {
     &__container {
+        flex: 1, 1, 45%;
         display: flex;
         width: 601px;
         height: 292px;
-       @media (max-width: 1435px) { 
-            width: 501px;
+       @media (max-width: 1436px) { 
+            width: 551px;
         }
     }
 
