@@ -8,7 +8,7 @@ const Catalog = ({ data, fetchError, isLoading }) => {
         visible: i => ({
             opacity: 1,
             transition: {
-                delay: i * 0.2,
+                delay: i * 0.08,
             },
         }),
         hidden: { opacity: 0 },

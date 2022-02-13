@@ -2,7 +2,7 @@
     &__general {
         background-color: #181818;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -34,4 +34,5 @@
     z-index: 22;
     max-width: 1280px;
     width: 100%;
+    height: 100%;
 }

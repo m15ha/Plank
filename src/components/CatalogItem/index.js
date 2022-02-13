@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import defaultImg from '../../assets/img/default.png';
-import arrowIcon from '../../assets/arrow-icon.png';
+// import arrowIcon from '../../assets/arrow-icon.svg';
+import { ReactComponent as ArrowIcon } from '../../assets/arrow-icon.svg';
 
 const CatalogItem = ({ caseStudy }) => {
     const { id, title, link, thumbnail, excerpt, categories } = caseStudy;
@@ -26,11 +27,12 @@ const CatalogItem = ({ caseStudy }) => {
                     rel='noopener noreferrer'
                 >
                     View Case Study
-                    <img
+                    {/* <img
                         className={styles.content__svg}
                         src={arrowIcon}
                         alt='Button arrow'
-                    />
+                    /> */}
+                    <ArrowIcon className={styles.content__svg} />
                 </a>
             </div>
         </div>

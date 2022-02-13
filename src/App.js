@@ -1,10 +1,11 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
+import useAxios from './hooks/useAxios';
 import Title from './components/Title';
 import Filters from './components/Filters';
 import Layout from './components/Layout';
 import Catalog from './components/Catalog';
-import useAxios from './hooks/useAxios';
+import Loader from './components/Loader';
 
 function App() {
     const [filtered, setFiltered] = useState([]);
@@ -45,19 +46,23 @@ function App() {
 
     return (
         <Layout>
-            <Title />
+            <Title />           
             <Filters
                 filterHandler={filterHandler}
                 selectedFilter={selectedFilter}
                 data={filtersData}
                 fetchError={filtersFetchError}
                 isLoading={filtersIsLoading}
-            />
-            <Catalog
-                data={filtered}
-                fetchError={catalogFetchError}
-                isLoading={catalogIsLoading}
-            />
+            />           
+            {catalogIsLoading ? (
+                <Loader />
+            ) : (
+                <Catalog
+                    data={filtered}
+                    fetchError={catalogFetchError}
+                    isLoading={catalogIsLoading}
+                />
+            )}
         </Layout>
     );
 }

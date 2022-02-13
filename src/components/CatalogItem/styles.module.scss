@@ -1,17 +1,17 @@
 .item {
     &__container {
-        flex: 1, 1, 45%;
+        flex: 1 1 auto;
         display: flex;
         width: 601px;
         // height: 292px;
-    //    @media (max-width: 1436px) { 
-    //         width: 551px;
-    //     }
+        //    @media (max-width: 1436px) {
+        //         width: 551px;
+        //     }
     }
 
     &__ibg {
         height: 291px;
-        flex: 1, 1, auto;
+        flex: 1 1 auto;
     }
 
     &__content {
@@ -52,7 +52,7 @@
         font-size: 16px;
         line-height: 22px;
         color: #eeecec;
-        flex: 1, 1, auto;
+        flex: 1 1 auto;
     }
     &__button {
         z-index: 1;
@@ -98,6 +98,9 @@
             cursor: pointer;
             color: #161616;
             border: 2px solid #ffffff;
+            svg path {
+                fill: #161616;
+            }
         }
 
         &:hover::before {
