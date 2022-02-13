@@ -3,10 +3,10 @@
         flex: 1, 1, 45%;
         display: flex;
         width: 601px;
-        height: 292px;
-       @media (max-width: 1436px) { 
-            width: 551px;
-        }
+        // height: 292px;
+    //    @media (max-width: 1436px) { 
+    //         width: 551px;
+    //     }
     }
 
     &__ibg {
@@ -73,8 +73,8 @@
         background-color: black;
         border: 2px solid #eeecec;
         position: absolute;
-        right: 3px;
-        bottom: 10px;
+        right: 2px;
+        bottom: 8px;
         background-color: transparent;
         overflow: hidden;
         transition: color 0.4s ease-in-out;

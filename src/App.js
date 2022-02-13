@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import './App.scss';
+import { useEffect, useState } from 'react';
 import Title from './components/Title';
 import Filters from './components/Filters';
 import Layout from './components/Layout';
@@ -33,13 +33,13 @@ function App() {
     const filterHandler = selectedSlug => {
         if (selectedSlug === 'all') {
             setFiltered(catalogData['case-studies']);
-           setSelectedFilter('all');
+            setSelectedFilter('all');
         } else {
             const filteredCatalog = catalogData['case-studies'].filter(item =>
                 item.categories.find(category => category.slug === selectedSlug)
-                );
-                setFiltered(filteredCatalog);
-                setSelectedFilter(selectedSlug);
+            );
+            setFiltered(filteredCatalog);
+            setSelectedFilter(selectedSlug);
         }
     };
 

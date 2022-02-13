@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import defaultImg from '../../assets/img/default.png';
-import arrowIcon from '../../assets/arrow-icon.svg';
+import arrowIcon from '../../assets/arrow-icon.png';
 
 const CatalogItem = ({ caseStudy }) => {
     const { id, title, link, thumbnail, excerpt, categories } = caseStudy;
@@ -32,9 +32,6 @@ const CatalogItem = ({ caseStudy }) => {
                         alt='Button arrow'
                     />
                 </a>
-                {/* <a href='/' className={styles.content__button}>
-                    View Case Study
-                </a> */}
             </div>
         </div>
     );
