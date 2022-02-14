@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/plank/static/css/main.ded64a2a.css",
+    "main.css": "/plank/static/css/main.c44db1f7.css",
     "main.js": "/plank/static/js/main.18880b38.js",
     "static/media/default.png": "/plank/static/media/default.e69137571a5521745e62.png",
     "index.html": "/plank/index.html",
     "static/media/xmark.svg": "/plank/static/media/xmark.abdf51eb164a98e13a3c967362f68456.svg",
     "static/media/bars.svg": "/plank/static/media/bars.4e339f62917978e6bc144d020217d10f.svg",
     "static/media/arrow-icon.svg": "/plank/static/media/arrow-icon.c15f0f2e6ae1b061aa67bc17638cbac3.svg",
-    "main.ded64a2a.css.map": "/plank/static/css/main.ded64a2a.css.map",
+    "main.c44db1f7.css.map": "/plank/static/css/main.c44db1f7.css.map",
     "main.18880b38.js.map": "/plank/static/js/main.18880b38.js.map"
   },
   "entrypoints": [
-    "static/css/main.ded64a2a.css",
+    "static/css/main.c44db1f7.css",
     "static/js/main.18880b38.js"
   ]
 }
