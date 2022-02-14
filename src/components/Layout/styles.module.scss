@@ -7,7 +7,7 @@
         justify-content: center;
         flex-direction: row;
         padding: 80px;
-        @media (max-width: 600px) {
+        @media (max-width: 660px) {
             padding: 40px;
         }
 
@@ -50,7 +50,7 @@
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 660px) {
         &__decoration2 {
             display: none;
             z-index: 1;

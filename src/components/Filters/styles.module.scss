@@ -93,8 +93,8 @@
             @media (max-width: 440px) {
                 padding: 20px;
                 svg {
-                    top: 20px;
-                    right: 20px;
+                    top: 30px;
+                    right: 30px;
                 }
             }
         }
@@ -103,11 +103,17 @@
     .filter__burger_container {
         display: flex;
         margin-bottom: 81px;
-    }
-}
-
-@media (max-width: 1225px) {
-    .filter__burger_container {
-        margin-bottom: 40px;
+        @media (max-width: 1225px) {
+            margin-bottom: 40px;
+        }
+        @media (max-width: 660px) {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+        @media (max-width: 440px) {            
+            top: 30px;
+            right: 30px;
+        }
     }
 }

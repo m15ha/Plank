@@ -32,13 +32,13 @@
         width: 100%;
 
         @media (max-width: 660px) {
-            margin-left: 20px;
+            margin-left: 30px;
         }
         @media (max-width: 440px) {
             margin-left: 0px;
             margin-bottom: 20px;
             padding: 10px 20px 0px 20px;
-            border-bottom: 1px solid #eeecec;
+            border-bottom: 2px solid #eeecec;
             gap: 10px;
         }
     }
