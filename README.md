@@ -1,9 +1,3 @@
-# Plank
-
-🏭 Production: https://m15ha.github.io/plank/
-
-🚧 QA: https://m15ha.github.io/plank/
-
 ## Setup
 
 First, install the dependencies:
